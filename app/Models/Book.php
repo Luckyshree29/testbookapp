@@ -9,13 +9,13 @@ class Book extends Model
 {
     use HasFactory;
     //
-    protected $fillable = ['title', 'author', 'rating'];
+    protected $fillable = ['title', 'author'];
     public function comments()
     {
         return $this->hasMany(Comment::class);
     }
     public function ratings()
-{
-    return $this->hasMany(Rating::class);
-}
+    {
+        return $this->hasMany(Rating::class);
+    }
 }
